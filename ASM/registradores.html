@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Linguagem Assembly - Registradores</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Linguagem Assembly - Registradores</h1>
+        </header>
+
+        <section id="introducao_registradores">
+            <h2>O que sao registradores?</h2>
+            <p>Em assembly, registradores sao areas de armazenamento de dados temporarios localizados dentro da CPU (Unidade Central de Processamento). Isso garante uma alta velocidade pois ele nao utiliza a memoria como armazenamento.</p>
+            <img src="Images/cpu.jpeg" />
+        </section>
+
+        <section id="tipos_de_registradores">
+            <h2>Tipos de registradores</h2>
+            <p>Ha diversos registradores na CPU para diversos tipos de operacoes, veja abaixo: </p>
+
+            <ul>
+                <li><b>Registradores Gerais:</b> Usado para armazenar dados temporarios e realizar operacoes aritmeticas e logicas.</li>
+                <li><b>Registradores de Segmento:</b> Usado para controlar o acesso a diferentes partes da memoria.</li>
+                <li><b>Registradores de Indice:</b> Usados em operacoes de acesso a arrays e estruturas de dados.</li>
+                <li><b>Registradores de Ponto Flutuante:</b> Usados para operacoes com numeros de ponto flutuante (decimais).</li>
+                <li><b>Registradores de Status:</b> Armazenam informacoes sobre o estado atual da CPU, como flags de condicao apos uma operacao.</li>
+            </ul>
+        </section>
+
+        <section id="registradores_gerais">
+            <h2>Registradores Gerais</h2>
+            <p>Em uma arquitetura x86, temos esses registradores gerais:</p>
+            <img src="Images/reggeral.jpg">
+            <p><b>EAX, EBX, ECX e EDX</b> sao registradores de 32 bits</p>
+            <p><b>AX, BX, CX e DX</b> sao registradores de 16 bits</p>
+            <p><b>AH/AL, BH/BL, CH/CL e DH/DL</b> sao registradores de 8 bits</p>
+            <br />
+            <p>Repare que os registradores de 16 bits estao divididos em duas partes. o AX, por exemplo, esta dividido em AH e AL.</p>
+            <p>H vem de <b>High Byte</b> e L vem de <b>Low Byte</b></p>
+            <p>Essa divisao facilita o <b>acesso a dados de tamanho menor</b>, <b>operacoes com bytes individuais</b>, <b>economia de espaco</b> e <b>compatibilidade</b>.</p>
+        </section>
+
+        <section id="registradores_segmento">
+            <h2>Registradores de Segmento</h2>
+            <p>Sao registradores para controlar o acesso a diferentes segmentos de memoria, sendo importantes para o enderecamento de memoria e na gestao de acesso a diferentes partes. Sao eles:</p>
+            <ul>
+                <li><b>CS (Code Segment):</b> Aponta para o segmento de codigo, que contem as instrucoes de programa em execucao</li>
+                <li><b>DS (Data Segment):</b> Aponta para o segmento de dados, que contem dados estaticos e variaveis globais</li>
+                <lI><b>ES (Extra Segment):</b> Eh usado para acesso adicional a dados, geralmente usado em instrucoes que lidam com operacoes de strings ou matrizes.</lI>
+                <li><b>SS (Stack Segment):</b> Aponta para o segmento de pilha, mas nao se preocupe, veremos sobre isso em breve!</li>
+                <li><b>FS e GS:</b> Em algumas arquiteturas x86, existem tambem os registradores FS e GS, que fornecem segmentos adicionais para acesso de dados.</li>
+            </ul>
+        </section>
+
+        <section id="registradores_indice">
+            <h2>Registradores de Segmento</h2>
+            <p>Sao registradores para controlar o acesso a diferentes segmentos de memoria, sendo importantes para o enderecamento de memoria e na gestao de acesso a diferentes partes. Sao eles:</p>
+            <ul>
+                <li><b>SI (Source Index):</b> Eh usado como indice para percorrer uma string ou uma array de dados.</li>
+                <li><b>DI (Destination Index):</b> Eh usado em operacoes semelhantes ao SI, mas eh geralmente usado para armazenar o destino de uma operacao, como copia de uma string para outra.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>Tutorial criado por ArTic/JhoPro.</p>
+        </footer>
+    </body>
+</html>
